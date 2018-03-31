@@ -9,12 +9,23 @@ Output:40320 -->
 
 <!DOCTYPE html>
 <html>
-	<head>
-		<script>
-			
-		</script>
-	</head>
-	<body>
-		
-	</body>
+
+<head>
+	<script>
+		firstFactorial = num => {
+			let result = num;
+			while (num > 1) {
+				num--;
+				result = result * num;
+			}
+			return result;
+		}
+		console.log(firstFactorial(5));
+	</script>
+</head>
+
+<body>
+
+</body>
+
 </html>
