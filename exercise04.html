@@ -9,12 +9,34 @@ Output:"gvO Ujnft!" -->
 
 <!DOCTYPE html>
 <html>
-	<head>
-		<script>
-			
-		</script>
-	</head>
-	<body>
-		
-	</body>
+
+<head>
+	<script>
+		function LetterChanges(str) {
+			var newStr = "";
+			for (var i = 0; i < str.length; i++) {
+				if (str.charCodeAt(i) == 122) {
+					newStr = newStr + "A";
+				} else if (str.charCodeAt(i) < 122 && str.charCodeAt(i) > 97) {
+					let temp = String.fromCharCode(str.charCodeAt(i) + 1)
+					if (temp == "e" || temp == "i" || temp == "o" || temp == "u") {
+						temp = temp.toUpperCase();
+
+					}
+					newStr = newStr + temp;
+
+				} else {
+					newStr = newStr + str[i];
+				}
+			}
+			return newStr;
+		}
+		console.log(LetterChanges("fun times! zzz hello*3"));
+	</script>
+</head>
+
+<body>
+
+</body>
+
 </html>
