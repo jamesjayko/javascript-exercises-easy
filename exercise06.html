@@ -11,7 +11,21 @@ Output:"I Ran There" -->
 <html>
 	<head>
 		<script>
-			
+			LetterCapitalize = str => {
+				var newStr = "";
+				newStr += str[0].toUpperCase();
+				for (var i = 1; i < str.length; i ++){
+					if (str[i] == " ") {
+						newStr += " ";
+						newStr += str[i+1].toUpperCase();
+						i++;
+					} else {
+						newStr += str[i]
+					}
+				}
+				return newStr;
+			}
+			console.log(LetterCapitalize("hello world 98 HeLLo #$2"));
 		</script>
 	</head>
 	<body>
