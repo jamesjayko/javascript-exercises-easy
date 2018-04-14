@@ -11,7 +11,15 @@ Output:9870 -->
 <html>
 	<head>
 		<script>
-			
+			SimpleAdding = num => {
+				let temp = num;
+				while (num > 0) {
+					temp = temp + (num - 1);
+					num --;
+				}
+				return temp;
+			}
+		console.log(SimpleAdding(140));
 		</script>
 	</head>
 	<body>
